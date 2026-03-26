@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solanji Construction — Premium Residential Construction · Houston, TX</title>
+  <meta name="description" content="Solanji Construction builds extraordinary homes across Greater Houston, Texas. Craftsmanship without compromise." />
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ===== TAILWIND CDN ===== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ===== SHARED STYLES ===== -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero-bg { background-image: url('extracted_images/image2.jpg'); }
+    .proj-dots {
+      position: absolute;
+      bottom: 0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      gap: 0.4rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .project-card:hover .proj-dots { opacity: 1; }
+    .proj-dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transition: background 0.3s ease;
+    }
+    .proj-dots span.active {
+      background: rgba(255,255,255,0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =====================================================
+       MOBILE NAV OVERLAY
+  ====================================================== -->
+  <nav id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <a href="#about"    onclick="closeMobile()">About</a>
+    <a href="#custom-homes" onclick="closeMobile()">Custom Homes</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#process"  onclick="closeMobile()">Process</a>
+    <a href="cost-to-build-home-houston.html" onclick="closeMobile()">Cost Guide</a>
+    <a href="#contact"  onclick="closeMobile()" style="color:var(--gold)">Contact</a>
+  </nav>
+
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
+  <header id="navbar" role="banner">
+    <a href="#" class="nav-logo" aria-label="Solanji Construction — Home">
+      <img src="transparentlogo.png" alt="Solanji Construction" />
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#custom-homes">Custom Homes</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="cost-to-build-home-houston.html">Cost Guide</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn-primary nav-cta-btn" aria-label="Request a consultation">
+      <span>Request Consultation</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ===================================================
+         HERO
+    =================================================== -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-color"></div>
+
+      <div class="hero-content">
+        <span class="section-label">Greater Houston, Texas</span>
+        <h1>Built to<br /><em>Endure.</em><br />Designed to<br />Inspire.</h1>
+        <p>Premium residential construction across Greater Houston. Every home we build is a reflection of our commitment to craft, precision, and elevated living.</p>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn-primary"><span>Request a Consultation</span></a>
+          <a href="#projects" class="btn-ghost">View Our Work →</a>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         STATS BAR
+    =================================================== -->
+    <div id="stats" role="region" aria-label="Company at a glance">
+      <div class="stats-inner section-wrap" style="padding:0 2.5rem;">
+        <div class="stat-cell">
+          <div class="stat-num">30+</div>
+          <div class="stat-label">Completed Projects</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Years in Houston</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Client Dedication</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">SCC</div>
+          <div class="stat-label">Solanji Construction</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         ABOUT
+    =================================================== -->
+    <section id="about">
+      <div class="section-wrap">
+        <div class="about-grid">
+
+          <!-- Image -->
+          <div class="about-image-wrap">
+            <div class="about-image-frame" aria-hidden="true"></div>
+            <img
+              src="extracted_images/image9.jpg"
+              alt="Luxury living room interior — 4002 Colquitt, Houston"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Text -->
+          <div class="about-text">
+            <span class="section-label">About Solanji</span>
+            <h2>Craftsmanship<br />at Every Scale</h2>
+            <div class="gold-rule"></div>
+            <p class="lead">
+              Solanji Construction was founded on a single belief: that every home deserves to be built with the care and precision of a masterwork.
+            </p>
+            <p class="body-copy">
+              Led by owner Mohamed Solanji, our team brings decades of hands-on expertise to residential construction across Greater Houston. From ground-up custom builds to luxury interior finishes, we approach every project with the same uncompromising standard of quality.
+            </p>
+            <p class="body-copy">
+              We serve homeowners across Greater Houston — delivering homes that stand apart in design, durability, and detail.
+            </p>
+            <a href="#contact" class="btn-primary"><span>Start Your Project</span></a>
+
+            <div class="owner-tag" style="margin-top:2.5rem;">
+              <div class="owner-line"></div>
+              <p><strong>Mohamed Solanji</strong> — Owner &amp; Lead Builder</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         CUSTOM HOMES
+    =================================================== -->
+    <section id="custom-homes">
+      <div class="section-wrap">
+        <div class="intro-grid">
+          <div class="intro-text">
+            <span class="section-label">Houston Custom Homes</span>
+            <h2>Your Vision,<br />Built Without<br />Compromise</h2>
+            <div class="gold-rule"></div>
+            <p class="lead">
+              Building a custom home is one of the most significant investments you will ever make. At Solanji Construction, we treat it that way — with the care, precision, and personal attention that a project of this magnitude deserves.
+            </p>
+            <p class="body-copy">
+              Led by owner Mohamed Solanji, our team has been building custom residences across Greater Houston for decades. We manage every phase of the construction process — from initial site evaluation and architectural coordination through framing, mechanical systems, interior finishes, and final walkthrough. Every detail is executed to exacting standards because we believe your home should reflect nothing less than the best.
+            </p>
+            <p class="body-copy">
+              Whether you are envisioning a contemporary estate in <a href="custom-home-builder-river-oaks.html">River Oaks</a>, a transitional home in <a href="custom-home-builder-memorial.html">Memorial</a>, or a modern farmhouse in the suburbs, we bring the same level of craftsmanship and accountability to every build. Our approach is simple: listen carefully, plan thoroughly, build meticulously, and deliver a home that exceeds expectations.
+            </p>
+            <p class="body-copy">
+              Curious about what it costs to build a custom home in Houston? Explore our <a href="cost-to-build-home-houston.html">comprehensive cost guide</a> for detailed breakdowns and insights.
+            </p>
+          </div>
+          <div class="intro-image-wrap">
+            <div class="about-image-frame" aria-hidden="true"></div>
+            <img src="extracted_images/image.jpg" alt="Custom-built luxury home exterior in Houston, Texas" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="services-header" style="margin-top:5rem;">
+          <span class="section-label">Custom Home Capabilities</span>
+          <h2>What We Deliver</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+                <path d="M9 21V12h6v9"/>
+              </svg>
+            </div>
+            <h3>Ground-Up Builds</h3>
+            <p>Complete custom home construction from foundation to final finishes. We coordinate every trade and manage every detail so you don't have to.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="1"/>
+                <path d="M3 9h18M9 21V9"/>
+              </svg>
+            </div>
+            <h3>Architectural Coordination</h3>
+            <p>We work closely with your architect and designers to ensure every plan translates flawlessly from paper to reality — no compromises, no shortcuts.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3"/>
+                <path d="M3 10h18v11H3z"/>
+                <path d="M6 14h.01M9 14h.01M12 14h.01M15 14h.01M18 14h.01"/>
+              </svg>
+            </div>
+            <h3>Premium Interiors</h3>
+            <p>Custom cabinetry, designer fixtures, stone surfaces, and curated finishes — every interior element is selected and installed to the highest standard.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+              </svg>
+            </div>
+            <h3>Exterior &amp; Landscape</h3>
+            <p>From masonry and siding to outdoor living areas and landscape coordination — we ensure the exterior matches the caliber of everything inside.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         FEATURED PROJECTS
+    =================================================== -->
+    <section id="projects">
+      <div class="section-wrap">
+        <div class="projects-header">
+          <div>
+            <span class="section-label">Portfolio</span>
+            <h2>Featured Projects</h2>
+          </div>
+          <a href="#contact" class="btn-ghost">Discuss Your Project →</a>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card" tabindex="0" aria-label="3113 Drexel — Greater Houston, Texas">
+            <img class="active" src="extracted_images/image2.jpg" alt="3113 Drexel — Modern custom home exterior, Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">3113 Drexel</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="4007 Colquitt — Greater Houston, Texas">
+            <img class="active" src="extracted_images/image.jpg" alt="4007 Colquitt — White exterior, Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">4007 Colquitt</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="47 St. Catherine — Greater Houston, Texas">
+            <img class="active" src="extracted_images/image4.png" alt="47 St. Catherine — Mediterranean estate exterior, Greater Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">47 St. Catherine</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="4002 Colquitt — Greater Houston, Texas">
+            <img class="active" src="extracted_images/colquitt_4002_exterior.jpg" alt="4002 Colquitt — Exterior, Houston TX" loading="lazy" />
+            <img src="extracted_images/colquitt_4002_3.jpg" alt="4002 Colquitt — Rear patio, Houston TX" loading="lazy" />
+            <img src="extracted_images/colquitt_4002_kitchen.jpg" alt="4002 Colquitt — Kitchen, Houston TX" loading="lazy" />
+            <img src="extracted_images/colquitt_4002_living.jpg" alt="4002 Colquitt — Living room, Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">4002 Colquitt</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="2 Alexandra Way Circle — Greater Houston, Texas">
+            <img class="active" src="extracted_images/image5.png" alt="2 Alexandra Way Circle — Contemporary custom home, Greater Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">2 Alexandra Way Circle</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="63 Aria Isle — Greater Houston, Texas">
+            <img class="active" src="extracted_images/aria_isle_63_a.jpg" alt="63 Aria Isle — Front exterior, Greater Houston TX" loading="lazy" />
+            <img src="extracted_images/aria_isle_63_b.jpg" alt="63 Aria Isle — Rear view, Greater Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">63 Aria Isle</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="5403 Meadow Lake Ln — Greater Houston, Texas">
+            <img class="active" src="extracted_images/image10.jpg" alt="5403 Meadow Lake Ln — Exterior, Houston TX" loading="lazy" />
+            <img src="extracted_images/meadow_lake_4.jpg" alt="5403 Meadow Lake Ln — Front view, Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">5403 Meadow Lake Ln</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="7 Lana Ln — Greater Houston, Texas">
+            <img class="active" src="extracted_images/lana_ln.jpg" alt="7 Lana Ln — Front exterior, Greater Houston TX" loading="lazy" />
+            <img src="extracted_images/lana_ln_2.jpg" alt="7 Lana Ln — Alternate view, Greater Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">7 Lana Ln</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="5534 Huckleberry — Greater Houston, Texas">
+            <img class="active" src="extracted_images/huckleberry.jpg" alt="5534 Huckleberry — Front exterior, Houston TX" loading="lazy" />
+            <img src="extracted_images/huckleberry_2.jpg" alt="5534 Huckleberry — Rear pool, Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">5534 Huckleberry</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+
+          <article class="project-card" tabindex="0" aria-label="55 Aria Isle — Greater Houston, Texas">
+            <img class="active" src="extracted_images/aria_isle_55.jpg" alt="55 Aria Isle — Custom home, Greater Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">55 Aria Isle</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="3211 Drexel — Greater Houston, Texas">
+            <img class="active" src="extracted_images/drexel_3211.jpg" alt="3211 Drexel — Custom home, Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">3211 Drexel</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" aria-label="5576 San Felipe — Greater Houston, Texas">
+            <img class="active" src="extracted_images/san_felipe.jpg" alt="5576 San Felipe — Residential project, Houston TX" loading="lazy" />
+            <div class="proj-overlay" aria-hidden="true"></div>
+            <div class="proj-info">
+              <div class="proj-name">5576 San Felipe</div>
+              <div class="proj-loc">Greater Houston, Texas</div>
+            </div>
+          </article>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         WHY CHOOSE US
+    =================================================== -->
+    <section id="why">
+      <div class="section-wrap">
+        <div class="why-grid">
+
+          <!-- Text -->
+          <div class="why-text">
+            <span class="section-label">Why Solanji</span>
+            <h2>Quality Is Not<br />an Option — It's<br />the Standard</h2>
+            <ul class="why-list">
+              <li class="why-item">
+                <div class="why-marker" aria-hidden="true"></div>
+                <div class="why-item-text">
+                  <h4>Precision Craftsmanship</h4>
+                  <p>Every joint, finish, and fixture is executed to exacting standards. We don't cut corners — we eliminate them.</p>
+                </div>
+              </li>
+              <li class="why-item">
+                <div class="why-marker" aria-hidden="true"></div>
+                <div class="why-item-text">
+                  <h4>Owner-Led Accountability</h4>
+                  <p>Mohamed Solanji is personally involved in every project from blueprint to handover — ensuring your vision is never lost in translation.</p>
+                </div>
+              </li>
+              <li class="why-item">
+                <div class="why-marker" aria-hidden="true"></div>
+                <div class="why-item-text">
+                  <h4>Transparent Communication</h4>
+                  <p>You'll always know where your project stands. Clear timelines, honest estimates, no surprises.</p>
+                </div>
+              </li>
+              <li class="why-item">
+                <div class="why-marker" aria-hidden="true"></div>
+                <div class="why-item-text">
+                  <h4>Premium Materials Only</h4>
+                  <p>We source high-grade materials and work with skilled subcontractors who share our commitment to lasting quality.</p>
+                </div>
+              </li>
+              <li class="why-item">
+                <div class="why-marker" aria-hidden="true"></div>
+                <div class="why-item-text">
+                  <h4>Local Expertise</h4>
+                  <p>Deep knowledge of Houston's building codes, climate, and luxury market — delivering homes built for Texas, built to last.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Image -->
+          <div class="why-image">
+            <div class="why-image-frame" aria-hidden="true"></div>
+            <img
+              src="extracted_images/image8.jpg"
+              alt="Luxury kitchen with marble island — Solanji Construction"
+              loading="lazy"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         PROCESS
+    =================================================== -->
+    <section id="process">
+      <div class="section-wrap">
+        <div class="process-header">
+          <span class="section-label">How We Work</span>
+          <h2>A Process Built on Trust</h2>
+        </div>
+
+        <div class="process-track">
+
+          <div class="process-step">
+            <div class="step-circle" aria-hidden="true">01</div>
+            <div class="step-name">Consultation</div>
+            <p class="step-copy">We begin with a detailed conversation about your goals, timeline, and budget — ensuring complete alignment before a single plan is drawn.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-circle" aria-hidden="true">02</div>
+            <div class="step-name">Planning</div>
+            <p class="step-copy">Our team develops a comprehensive project plan, including design direction, material selection, permitting, and a milestone schedule.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-circle" aria-hidden="true">03</div>
+            <div class="step-name">Build</div>
+            <p class="step-copy">Construction proceeds with close daily oversight. You receive regular progress updates and have direct access to Mohamed throughout every phase.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="step-circle" aria-hidden="true">04</div>
+            <div class="step-name">Delivery</div>
+            <p class="step-copy">A thorough final walkthrough ensures every detail meets our standard and yours. We don't consider a project complete until you do.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         CONTACT / CTA
+    =================================================== -->
+    <section id="contact">
+      <div class="section-wrap">
+        <div class="contact-inner">
+          <span class="section-label">Get In Touch</span>
+          <h2>Ready to Build<br /><em>Something Extraordinary?</em></h2>
+          <p>Whether you're planning a custom home or envisioning something entirely new, we'd love to hear about your vision. Reach out to request a consultation or estimate.</p>
+          <div class="cta-btn-row">
+            <a href="tel:+17139355592" class="btn-primary"><span>Call +1 713.935.5592</span></a>
+            <a href="mailto:solanjiconstruction@hotmail.com" class="btn-ghost">Send an Email →</a>
+          </div>
+
+          <div class="contact-cards" role="list">
+            <div class="contact-card" role="listitem">
+              <div class="contact-card-label">Phone</div>
+              <div class="contact-card-val">
+                <a href="tel:+17139355592">713.935.5592</a>
+              </div>
+            </div>
+            <div class="contact-card" role="listitem">
+              <div class="contact-card-label">Email</div>
+              <div class="contact-card-val">
+                <a href="mailto:solanjiconstruction@hotmail.com">solanjiconstruction@hotmail.com</a>
+              </div>
+            </div>
+            <div class="contact-card" role="listitem">
+              <div class="contact-card-label">Office</div>
+              <div class="contact-card-val">5805 Winsome Ln. Suite 101<br />Houston, TX 77057</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         OWNER
+    =================================================== -->
+    <section id="owner" style="padding:5rem 0; border-top:1px solid var(--gold-border);">
+      <div class="section-wrap">
+        <div style="display:flex; align-items:center; justify-content:center; gap:3rem; flex-wrap:wrap;">
+          <div style="flex-shrink:0;">
+            <img
+              src="extracted_images/owner.jpg"
+              alt="Mohamed Solanji — Sole Owner &amp; Lead Builder"
+              loading="lazy"
+              style="width:160px; height:160px; object-fit:cover; border-radius:50%; border:2px solid var(--gold-border);"
+            />
+          </div>
+          <div style="max-width:480px;">
+            <span class="section-label">Sole Owner &amp; Lead Builder</span>
+            <h3 style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; color:var(--text); margin-bottom:0.75rem; letter-spacing:-0.02em;">Mohamed Solanji</h3>
+            <p style="font-size:0.9375rem; color:var(--text-muted); line-height:1.8;">Personally involved in every project from blueprint to handover. With decades of hands-on experience in residential construction, Mohamed ensures your vision is built with uncompromising quality and attention to detail.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <img src="transparentlogo.png" alt="Solanji Construction" />
+        <p>Premium residential construction across Greater Houston, Texas. Built with precision. Finished with pride.</p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="footer-col">
+        <p class="footer-col-title">Navigation</p>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#custom-homes">Custom Homes</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <p class="footer-col-title">Services</p>
+        <ul>
+          <li><a href="custom-home-builder-houston.html">Custom Homes</a></li>
+          <li><a href="general-contractor-houston.html">General Contracting</a></li>
+          <li><a href="luxury-home-construction-houston.html">Luxury Construction</a></li>
+        </ul>
+      </div>
+
+      <!-- Locations & Resources -->
+      <div class="footer-col">
+        <p class="footer-col-title">Service Areas</p>
+        <ul>
+          <li><a href="custom-home-builder-river-oaks.html">River Oaks</a></li>
+          <li><a href="custom-home-builder-memorial.html">Memorial</a></li>
+          <li><a href="#">The Woodlands</a></li>
+          <li><a href="cost-to-build-home-houston.html">Cost Guide</a></li>
+        </ul>
+        <p class="footer-col-title" style="margin-top:1.5rem;">Contact</p>
+        <address>
+          <p><a href="tel:+17139355592" style="color:var(--text-muted);text-decoration:none;">713.935.5592</a></p>
+          <p style="margin-top:0.5rem;"><a href="mailto:solanjiconstruction@hotmail.com" style="color:var(--text-muted);text-decoration:none;">solanjiconstruction@hotmail.com</a></p>
+        </address>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Solanji Construction. All rights reserved.</p>
+      <p>Greater Houston, Texas · SCC</p>
+    </div>
+  </footer>
+
+  <!-- =====================================================
+       JAVASCRIPT — Nav scroll, hamburger, hero animate
+  ====================================================== -->
+  <script>
+    // ── Navbar scroll class ──────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ── Hero image Ken Burns ─────────────────────────────
+    const heroBg = document.getElementById('heroBg');
+    requestAnimationFrame(() => {
+      setTimeout(() => heroBg.classList.add('animate'), 100);
+    });
+
+    // ── Hamburger / Mobile Nav ───────────────────────────
+    const btn       = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    let menuOpen    = false;
+
+    function openMobile() {
+      menuOpen = true;
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      mobileNav.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobile() {
+      menuOpen = false;
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    btn.addEventListener('click', () => menuOpen ? closeMobile() : openMobile());
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && menuOpen) closeMobile();
+    });
+
+    // ── Project card image slideshow (hover only) ───────
+    document.querySelectorAll('.project-card').forEach(card => {
+      const imgs = card.querySelectorAll('img');
+      if (imgs.length < 2) return;
+
+      // Build dots
+      const dotsWrap = document.createElement('div');
+      dotsWrap.className = 'proj-dots';
+      dotsWrap.setAttribute('aria-hidden', 'true');
+      for (let i = 0; i < imgs.length; i++) {
+        const dot = document.createElement('span');
+        if (i === 0) dot.classList.add('active');
+        dotsWrap.appendChild(dot);
+      }
+      card.appendChild(dotsWrap);
+      const dots = dotsWrap.querySelectorAll('span');
+
+      let current = 0;
+      let timer = null;
+
+      function goTo(index) {
+        imgs[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = index;
+        imgs[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      function advance() {
+        goTo((current + 1) % imgs.length);
+      }
+
+      function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(advance, 5000);
+      }
+
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        advance();
+        startTimer();
+      });
+
+      let firstHover = true;
+      card.addEventListener('mouseenter', () => {
+        if (firstHover) {
+          advance();
+          firstHover = false;
+        }
+        startTimer();
+      });
+
+      card.addEventListener('mouseleave', () => {
+        clearInterval(timer);
+        timer = null;
+        goTo(0);
+      });
+    });
+  </script>
+
+</body>
+</html>
