@@ -557,6 +557,32 @@ body::after {
   text-decoration: none;
 }
 
+/* ── SHOWCASE IMAGE (gold-framed, contained) ─────────── */
+.showcase-image {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.showcase-image img {
+  width: 100%;
+  height: 50vh;
+  min-height: 320px;
+  max-height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── FEATURES GRID (3-col service cards) ─────────────── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--gold-border);
+  gap: 0;
+}
+
+/* ── STATS → SECTION SPACING ─────────────────────────── */
+#stats + section { margin-top: 4rem; }
+
 /* ── FEATURED PROJECTS ────────────────────────────────── */
 #projects, .projects-section { padding: 7rem 0; }
 .projects-header {
@@ -1108,6 +1134,7 @@ footer {
   .nav-links, .nav-cta-btn { display: none; }
   .hamburger { display: flex; }
   .projects-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
   .scroll-cue { display: none; }
   #about, #services, #custom-homes, #projects, #why, #process, #contact,
   .about-section, .services-section, .projects-section, .why-section,
