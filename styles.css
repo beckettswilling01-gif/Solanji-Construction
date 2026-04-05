@@ -373,7 +373,8 @@ body::after {
 /* ── SUBPAGE HERO ─────────────────────────────────────── */
 .subpage-hero {
   position: relative;
-  min-height: 520px;
+  height: 100svh;
+  min-height: 680px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -1128,5 +1129,5 @@ footer {
   .stat-cell { border-right: none; border-bottom: 1px solid var(--gold-border); }
   .stat-cell:last-child { border-bottom: none; }
   .projects-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .subpage-hero { min-height: 420px; }
+  .subpage-hero { height: 100svh; min-height: 520px; }
 }
