@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://solanji-construction.vercel.app/</loc>
+    <loc>https://solanjiconstruction.com/</loc>
     <lastmod>2026-03-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://solanji-construction.vercel.app/custom-home-builder-houston.html</loc>
+    <loc>https://solanjiconstruction.com/cost-to-build-home-houston.html</loc>
     <lastmod>2026-03-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://solanji-construction.vercel.app/cost-to-build-home-houston.html</loc>
-    <lastmod>2026-03-27</lastmod>
-    <priority>0.8</priority>
+    <loc>https://solanjiconstruction.com/custom-homes-river-oaks.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solanjiconstruction.com/custom-homes-memorial.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solanjiconstruction.com/custom-homes-the-woodlands.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
